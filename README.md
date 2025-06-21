@@ -2,8 +2,8 @@
 
 A Chrome extension that replaces your new tab page with a real-time display of your age, inspired by the concept of memento mori and the original work by Alex MacCaw.
 
-![Extension Preview](images/screenshot_dark_1280x800.png)
-![Extension Preview](images/screenshot_light_1280x800.png)
+![Extension Preview](images/screenshot_1280x800_dark.png)
+![Extension Preview](images/screenshot_1280x800_light.png)
 
 ## 🎯 Purpose
 
