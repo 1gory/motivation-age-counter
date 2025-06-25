@@ -25,7 +25,7 @@ body {
 
 body, input {
   display: -webkit-flex;
-  font-family: 'Avenir', 'helvetica neue', helvetica, arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Avenir', helvetica, arial, sans-serif;
 }
 
 .age-label {
@@ -95,4 +95,3 @@ footer {
     color: #fff;
   }
 }
-

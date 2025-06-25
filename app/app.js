@@ -1,3 +1,14 @@
+// Theme-aware favicon
+function updateFavicon() {
+  const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const favicon = document.getElementById('favicon');
+  favicon.href = isDark ? 'icons/icon-dark.svg' : 'icons/icon-light.svg';
+}
+
+// Update favicon on load and theme change
+updateFavicon();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+
 class TemplateEngine {
   static compile(template) {
     return (data) => template.replace(/\{\{(\w+)\}\}/g, (match, key) => data[key] || '');
