@@ -1,14 +1,3 @@
-// Theme-aware favicon
-function updateFavicon() {
-  const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const favicon = document.getElementById('favicon');
-  favicon.href = isDark ? 'icons/icon-dark.svg' : 'icons/icon-light.svg';
-}
-
-// Update favicon on load and theme change
-updateFavicon();
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
-
 class TemplateEngine {
   static compile(template) {
     return (data) => template.replace(/\{\{(\w+)\}\}/g, (match, key) => data[key] || '');
@@ -69,7 +58,7 @@ class App {
   renderAge() {
     const now = new Date();
     const duration = now - this.dob;
-    const years = duration / 31556900000; // milliseconds in a year
+    const years = duration / 31556900000;
 
     const [yearPart, decimalPart] = years.toFixed(9).split('.');
 
@@ -87,7 +76,6 @@ class App {
   }
 }
 
-// Initialize app when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   const appElement = document.getElementById('app');
   if (appElement) {
